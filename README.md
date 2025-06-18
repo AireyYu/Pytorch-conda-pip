@@ -31,15 +31,19 @@ print(f"CUDA版本: {torch.version.cuda}")            # 可能显示 12.1，但�
 print(f"GPU设备: {torch.cuda.get_device_name(0)}")  # 显示显卡型号
  ```  
 7. **几个操作**  
-   ```conda env export --no-builds > environment.yml #导出yml文件```  
    yml文件里面包含这个环境的所有的包，新建的环境可以用这个yml文件快速生成.  
-   查看环境列表:  ```conda env list```  
-   新环境生成：  ```conda env create -f environment.yml -n new_env #这里用了之前的yml文件```  
+   ```conda env export --no-builds > environment.yml #导出yml文件```  
+     
+   查看环境列表:  
+   ```conda env list```  
+   新环境生成：  
+   ```conda env create -f environment.yml -n new_env #这里用了之前的yml文件```  
    环境删除：  
    ```conda env remove -n new_env ```  
    ```conda remove --name new_env --all -y -y```  
    环境更新(最基础的):  
-   ```conda env export --no-builds > environment.yml # 等于重新导出一次yml文件覆盖之前的旧文件 ```    
+   ```conda env export --no-builds > environment.yml # 等于重新导出一次yml文件覆盖之前的旧文件 ```  
+           
    *注意*：这边因为CUDA版本太高被迫选择用Pip去pytorch官方源下载，所以导致直接用yml生成新环境时报错：查找不到对应torch版本，因为它这里是从PyPI里面检索的。  所以在报错之后其他包都已经下载完成，
    再次手动下载pip install torch==2.5.1+cu121 --index-url `https://download.pytorch.org/whl/cu121`
 
