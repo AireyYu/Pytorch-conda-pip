@@ -11,7 +11,7 @@
   pip install transformers  # 纯Python包， 到这一步基本安装好了基本需要的包
 
 6.测试代码
-   print(f"PyTorch版本: {torch.__version__}")          # 应输出 2.3.0+
+   print(f"PyTorch版本: {torch.__version__}")          # 应输出 2.3.0+ \r
    print(f"CUDA可用: {torch.cuda.is_available()}")     # 应输出 True
    print(f"CUDA版本: {torch.version.cuda}")            # 可能显示 12.1，但实际使用 12.9 驱动
    print(f"GPU设备: {torch.cuda.get_device_name(0)}")  # 显示你的显卡型号
