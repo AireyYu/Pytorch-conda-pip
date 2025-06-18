@@ -1,4 +1,5 @@
 # Pychram使用Anaconda虚拟环境设置
+**创建全新Python 3.10环境** 
 1. 创建一个全新空的环境：conda create -n ai_env python=3.10 -y 这里要python为3.10版本
 2. 激活环境：conda activate ai_env
 3. 考虑到直接运行pip install torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121 装pytorch 会导致pip下的numpy和conda下的numpy版本不一致，所以先安装nummpy(Conda优先)
