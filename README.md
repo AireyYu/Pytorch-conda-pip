@@ -7,8 +7,8 @@ conda create -n ai_env python=3.10 -y     #这里要python为3.10版本
  ```
 conda activate ai_env
  ```
-4.**安装Numpy**
-  考虑到直接运行pip install torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121 装pytorch 会导致pip下的numpy和conda下的numpy版本不一致，所以先安装nummpy(Conda优先)
+4.**安装Numpy**  
+ 考虑到直接运行pip install torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121 装pytorch 会导致pip下的numpy和conda下的numpy版本不一致，所以先安装nummpy(Conda优先)
  ```
    conda install numpy=1.26.4 -c conda-forge
  ```
