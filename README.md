@@ -7,7 +7,7 @@ conda create -n ai_env python=3.10 -y     #这里要python为3.10版本
  ```
 conda activate ai_env
  ```
-3.**安装Numpy**  
+3. **安装Numpy**  
  考虑到直接运行pip install torch==2.5.1+cu121 --index-url `https://download.pytorch.org/whl/cu121` 装pytorch 会导致pip下的numpy和conda下的numpy版本不一致，所以先安装nummpy(Conda优先)
  ```
 conda install numpy=1.26.4 -c conda-forge
@@ -32,9 +32,8 @@ print(f"GPU设备: {torch.cuda.get_device_name(0)}")  # 显示显卡型号
  ```  
 7. **几个操作**  
 yml文件里面包含这个环境的所有的包，新建的环境可以用这个yml文件快速生成.  
-```conda env export --no-builds > environment.yml #导出yml文件```  
-     
-查看环境列表:  
+```conda env export --no-builds > environment.yml #导出yml文件```      
+ 查看环境列表:  
  ```conda env list```  
  新环境生成：  
  ```conda env create -f environment.yml -n new_env #这里用了之前的yml文件```  
