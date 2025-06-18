@@ -8,13 +8,13 @@ conda create -n ai_env python=3.10 -y     #这里要python为3.10版本
 conda activate ai_env
  ```
 3. **安装Numpy**
-考虑到直接运行`pip install torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121` 装pytorch 会导致pip下的numpy和conda下的numpy版本不一致，所以先安装numpy(Conda优先)
+考虑到直接运行`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121` 装pytorch 会导致pip下的numpy和conda下的numpy版本不一致，所以先安装numpy(Conda优先)
  ```
 conda install numpy=1.26.4 -c conda-forge
  ```
 4. **安装 PyTorch GPU 版（Pip 安装）**
 ```
-pip install torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 因为我的CUDA版本为12.9比较高，PyTorch/Conda 生态系统目前仅正式支持到 CUDA 12.4 导致 Conda 无法直接提供匹配的预编译包，必须要用pip来安装pytorch，直接用pytorch官方源(不从默认的PyPI).  
 
@@ -44,7 +44,7 @@ yml文件里面包含这个环境的所有的包，新建的环境可以用这�
 ```conda env export --no-builds > environment.yml # 等于重新导出一次yml文件覆盖之前的旧文件 ```  
 
 *注意*：这边因为CUDA版本太高被迫选择用Pip去pytorch官方源下载，所以导致直接用yml生成新环境时报错：查找不到对应torch版本，因为它这里是从PyPI里面检索的。  所以在报错之后其他包都已经下载完成，
-再次手动下载`pip install torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121`
+再次手动下载`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121`
 
   
 
