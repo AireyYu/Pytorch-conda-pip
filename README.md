@@ -1,3 +1,5 @@
+# 打开anaconda cmd
+
 # Pychram使用Anaconda虚拟环境设置  
 1. **创建全新Python 3.10环境** 
 ```bash
