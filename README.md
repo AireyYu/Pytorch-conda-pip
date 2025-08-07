@@ -1,7 +1,7 @@
 
 
 # Pychram使用Anaconda虚拟环境设置  
-### ***打开anaconda cmd***
+### ***打开 anaconda cmd***
 1. **创建全新Python 3.10环境** 
 ```bash
 conda create -n ai_env python=3.10 -y     #这里要python为3.10版本
